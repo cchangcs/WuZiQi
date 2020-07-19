@@ -4,6 +4,7 @@
 ## 主要功能
 ### 1、棋盘棋子绘制
 **其盘绘制**<br />
+```
 void CMy05gobangView::OnPaint()
 {
 	// 不要为绘制消息而调用 CWnd::OnPaint()
@@ -64,9 +65,10 @@ void CMy05gobangView::OnPaint()
 		}
 	 }
 }
-
+```
 
 **棋子绘制**<br />
+```
 void CMy05gobangView::OnLButtonUp(UINT nFlags, CPoint point)
 {
 	// TODO: 在此添加消息处理程序代码和/或调用默认值
@@ -135,9 +137,10 @@ void CMy05gobangView::OnLButtonUp(UINT nFlags, CPoint point)
 	left(_m,_n);
 	right(_m,_n);
 }
-
+```
 ### 2、输赢判定
 **主要判定垂直、水平、左斜45°、右斜45°是个方向的输赢情况**<br />
+```
 void CMy05gobangView::vertial(int x,int y)
 {
 	
@@ -249,9 +252,10 @@ void CMy05gobangView::right(int x,int y)
 		}
 	}
 }
-
+```
 
 ### 3、开始新游戏<br />
+```
 //新游戏
 void CMy05gobangView::OnNewGameBtn() {
 	for (int i = 0;i < 15;i++)
@@ -266,8 +270,10 @@ void CMy05gobangView::OnNewGameBtn() {
 	whitefirst = true;
 	Invalidate();
 }
+```
 
 ### 4、悔棋操作<br />
+```
 //悔棋
 void CMy05gobangView::OnRollback(CCmdUI *pCmdUI) {
 	pCmdUI->Enable(isChessChange());
@@ -297,8 +303,10 @@ void CMy05gobangView::OnRollbackBtn() {
 	}
 	Invalidate();
 }
+```
 
-### 修改背景样式<br />
+### 5、修改背景样式<br />
+```
 void CMy05gobangView::OnOptions(CCmdUI *pCmdUI) {
 	//backgroundColor数值为1时切换为绿色
 	if (backgroundColor == 1) {
@@ -340,6 +348,7 @@ void CMy05gobangView::OnOptionsBtn() {
 		backgroundColor = 1;
 	}
 }
+```
 ## 运行结果
 
 ![github](https://github.com/cchangcs/WuZiQi/blob/master/show.jpg "github")  
