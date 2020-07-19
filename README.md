@@ -3,7 +3,7 @@
 
 ## 主要功能
 ### 1、棋盘棋子绘制
-**其盘绘制**<br />
+**棋盘绘制**<br />
 ```
 void CMy05gobangView::OnPaint()
 {
