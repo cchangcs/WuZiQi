@@ -65,6 +65,7 @@ void CMy05gobangView::OnPaint()
 	 }
 }
 
+
 **棋子绘制**<br />
 void CMy05gobangView::OnLButtonUp(UINT nFlags, CPoint point)
 {
